@@ -1,0 +1,39 @@
+table {
+
+    border-collapse: collapse;
+    width: 80%;
+
+}
+
+table,tr,td,th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+   
+}
+image{
+    height: 5px;
+    width: 5px;
+}
+.top{
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+input{
+    width: 300px;
+    margin-right: 5px;
+}
+
+label {
+       width: 60px;
+       font-weight: bold;
+    
+}
+
+button:hover{
+    background-color: green;
+}
+
+
+

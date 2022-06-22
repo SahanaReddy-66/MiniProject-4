@@ -1,0 +1,52 @@
+<div class="top">
+    <label for="">Search</label>
+    <input type="text" [(ngModel)]="find" placeholder="Search by Name">
+    <button (click)="searching()">ok</button>
+</div>
+<!-- <br><br><br> -->
+<div class="row" style="margin-left: 20px;">
+    <div class="col-5">
+        <table>
+            <tr>
+                <th>Sl.No</th>
+                <th>Name</th>
+                <th>Details</th>
+            </tr>
+            <tr *ngFor="let item of array; let i=index">
+                <td>{{i+1}} </td>
+                <td>
+                    {{item.first_name}} {{item.last_name}}
+                </td>
+
+                <td><button (click)="details(i)" class="btn btn-primary touch">View</button></td>
+            </tr>
+        </table>
+
+
+    </div>
+    <div class="col-5">
+        <h3>Details </h3>
+        <div *ngIf="display">
+            <p> <b>ID:</b> {{a}}</p>
+            <p><b>Email:</b> {{b}}</p>
+            <p><b>First Name:</b> {{c}}</p>
+            <p><b>Last Name:</b> {{d}}</p>
+            <p><b>Avatar:</b> {{e}}</p>
+            <p><b>Image:</b><img src="{{e}}" alt=""> </p>
+        </div>
+
+        <div *ngIf="result">
+            <h3>Search Results </h3>
+            <div *ngFor="let item of resultArray">
+                <p> <b>ID: &nbsp;</b> {{item.id}}</p>
+                <p><b>Email:</b> {{item.email}}</p>
+                <p><b>First Name:</b> {{item.first_name}}</p>
+                <p><b>Last Name:</b> {{item.last_name}}</p>
+                <p><b>Avatar:</b> {{item.avatar}}</p>
+                <p><b>Image:</b><img src="{{item.avatar}}" alt=""></p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
